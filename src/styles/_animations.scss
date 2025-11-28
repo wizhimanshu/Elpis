@@ -1,0 +1,71 @@
+.blob-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  /* IMPORTANT FIX */
+  z-index: 0; 
+  pointer-events: none; // ensures blobs don't block clicks
+}
+
+.blob {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: linear-gradient(15deg, #5FA8FF 0%, #6FE7FF 100%);
+    filter: blur (80px);
+    opacity: 0.45;
+    
+    animation:
+      blobFloat 38s ease-in-out infinite,
+      blobPulse 14s ease-in-out infinite;
+
+    --tx: 0px;
+    --ty: 0px;
+    --scale: 1;
+
+    transform: translate(var(--tx), var(--ty)) scale(var(--scale));  
+    will-change: transform, opacity;
+
+
+}
+
+.blob1{
+    top: -120px;
+    left: -120px;
+}
+
+.blob2{
+    bottom: -150px;
+    right: -150px;
+}
+
+.blob3{
+    top: 40%;
+    left: -180px;
+}
+
+@keyframes blobFloat {
+  0% {
+    --tx: 0px;
+    --ty: 0px;
+  }
+  50% {
+    --tx: 60px;
+    --ty: -80px;
+  }
+  100% {
+    --tx: 0px;
+    --ty: 0px;
+  }
+}
+
+@keyframes blobPulse {
+  0%   { --scale: 1; }
+  50%  { --scale: 1.08; }
+  100% { --scale: 1; }
+}

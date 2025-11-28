@@ -1,0 +1,23 @@
+// ---------------------------------------------
+//  GLOBAL STYLES — connects the entire theme
+// ---------------------------------------------
+
+// 1. Theme variables
+@import './_variables';
+
+// 2. Mixins (future step)
+@import './_mixins';
+
+// 3. Animations (future step)
+@import './_animations';
+
+// 4. Custom Bootstrap build
+@import './_bootstrap-custom';
+
+// 5. Global base styles (body, typography, etc.)
+
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+

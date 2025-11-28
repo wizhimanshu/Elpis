@@ -1,0 +1,10 @@
+// ---------------------------------------------
+//  CUSTOM BOOTSTRAP BUILD
+//  This file builds Bootstrap using your theme
+// ---------------------------------------------
+
+// 1. Import your variables BEFORE Bootstrap
+@import './variables';
+
+// 2. Import Bootstrap SCSS
+@import 'bootstrap/scss/bootstrap';

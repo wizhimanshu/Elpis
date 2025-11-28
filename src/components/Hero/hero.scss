@@ -1,0 +1,98 @@
+.hero-title {
+  position: relative;
+  top:20%;
+  padding-top: 10%;
+  padding-bottom: 5%;
+
+  &::after {
+    content: "";
+    width: 160px;
+    height: 18px;
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(95,168,255,.32), transparent 70%);
+    filter: blur(15px);
+  }
+}
+
+.hero-subtitle{
+    align-items:center;
+    
+}
+
+.primary-btn{
+    border-radius:35px;
+    margin-right:2px;
+}
+
+.secondary-btn{
+    border-radius:35px;
+    margin-left:5px;
+}
+
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding-bottom:10%;
+  border-radius:35px;
+  margin-top:10%;
+  width:175%;
+  right:35%;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: rgba(95,168,255,0.25);
+  filter: blur(80px);
+  animation: float 12s ease-in-out infinite alternate;
+}
+
+.hero-glow:nth-child(1) { top: 10%; left: -10%; }
+.hero-glow:nth-child(2) { top: 50%; left: 60%; animation-delay: 3s; }
+
+@keyframes float {
+  from { transform: translateY(-20px) scale(1); opacity: .5; }
+  to   { transform: translateY(30px) scale(1.15); opacity: .9; }
+}
+
+
+/* Page fade-in */
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Slide hero up into place */
+.slide-up {
+  animation: slideUp 1.2s ease forwards;
+  transform: translateY(30px);
+  opacity: 0;
+}
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Buttons drop animation */
+.rise {
+  animation: riseUp 1.4s ease forwards;
+  transform: translateY(40px);
+  opacity: 0;
+}
+@keyframes riseUp {
+  60% { transform: translateY(0px); opacity: .9; }
+  80% { transform: translateY(6px); }
+  100%{ transform: translateY(0px); opacity: 1; }
+}
