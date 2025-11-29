@@ -1,0 +1,93 @@
+.testimonials-section {
+  position: relative;
+  width: 85%;
+  margin: 10% auto;
+  padding: 6rem 4rem;
+  border-radius: 35px;
+  overflow: hidden;
+
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 0 45px rgba(95,168,255,0.25);
+}
+
+/* Glow blobs like hero */
+.testimonial-glow {
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: rgba(95,168,255,0.25);
+  filter: blur(80px);
+  animation: float 12s ease-in-out infinite alternate;
+}
+
+.testimonial-glow:nth-child(1) { top: 15%; left: -10%; }
+.testimonial-glow:nth-child(2) { bottom: 10%; right: 5%; animation-delay: 3s; }
+
+/* Title - baseline glow same style as hero/title */
+.testimonial-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: .8rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 160px;
+    height: 18px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -18px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(95,168,255,.32), transparent 70%);
+    filter: blur(15px);
+  }
+}
+
+.testimonial-sub {
+  text-align: center;
+  opacity: .85;
+  margin-bottom: 3.5rem;
+  font-size: 1.05rem;
+}
+
+/* CARDS */
+.testimonial-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-card {
+  width: 280px;
+  padding: 2.2rem;
+  border-radius: 32px;
+  text-align: center;
+  background: #0E131C;
+  color: white;
+
+  box-shadow:
+    inset 0 0 8px rgba(255,255,255,0.15),
+    0 0 20px rgba(95,168,255,0.30);
+
+  transition: .35s ease;
+
+  p { font-size: 1rem; margin-bottom: .9rem; line-height: 1.55; opacity:.95; }
+  span { font-size:.85rem; opacity:.75; font-weight:500; }
+
+  &:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: #161d28;
+    box-shadow:
+      0 0 28px rgba(95,168,255,0.50),
+      inset 0 0 18px rgba(255,255,255,0.22);
+  }
+}
+
+/* animation reuse */
+.fade-in{ animation: fadeIn 1.2s ease forwards; opacity:0; }
+.slide-up{ animation: slideUp 1.2s ease forwards; }
+.rise{ animation: riseUp 1.4s ease forwards; }

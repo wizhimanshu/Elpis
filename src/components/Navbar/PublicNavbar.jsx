@@ -7,7 +7,8 @@ export default function PublicNavbar(){
 
                 {/* Left: Logo */}
                 <div className="nav-left">
-                    <div className="logo">ELPIS</div>
+                  <img src="/src/assets/elpis.svg" className="logo-icon" />
+                  {/* <span className="logo-text">ELPIS</span> */}
                 </div>
 
                 {/* Center: Navigations */}

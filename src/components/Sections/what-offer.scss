@@ -1,0 +1,145 @@
+.what-offer-section {
+  position: relative;
+  width: 80%;
+  margin: 200px auto 150px auto;
+  padding: 6rem 4rem;
+  border-radius: 35px;
+  overflow: hidden;
+  right:-3%;
+
+  /* Same subtle gradient as hero */
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 0 45px rgba(95,168,255,0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+
+
+  /* 🔹 Glow blobs like hero */
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(95,168,255,.25);
+    filter: blur(85px);
+    z-index: -1;
+  }
+  &::before { top: -15%; left: -10%; }
+  &::after  { bottom: -10%; right: -5%; }
+
+
+  /* LEFT SIDE */
+  .offer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .section-title {
+    font-size: 2.9rem;
+    font-weight: 500;
+    position: relative;
+    text-align: left;
+    margin-top:-100px;
+
+    /* 🔹 Baseline glow same as .hero-title */
+    &::after {
+      content: "";
+      width: 160px;
+      height: 18px;
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(95,168,255,.32), transparent 70%);
+      filter: blur(15px);
+    }
+  }
+
+
+  /* ───────── BUTTON PILL STYLING (Now Hero Style Black) ───────── */
+  .offer-list {
+    display: flex;
+    margin-top:20px;
+    margin-bottom:-20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .offer-pill {
+    width: fit-content;
+    padding: 16px 42px;
+    border-radius: 40px;
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    background: #0E131C;            /* HERO black button */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: .35s ease;
+
+    box-shadow:
+      inset 0 0 18px rgba(255,255,255,0.14),
+      0 0 20px rgba(95,168,255,0.28);
+
+    &:hover {
+      transform: translateX(10px) scale(1.05);
+      background: #1A2230;
+      box-shadow: 0 0 30px rgba(95,168,255,0.45);
+    }
+  }
+
+
+  /* RIGHT IMAGE SIDE */
+  .offer-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .preview-card {
+    width: 450px;
+    height: 380px;
+    border-radius: 35px;
+    overflow: hidden;
+    top:20%;
+
+    box-shadow:
+      0 0 40px rgba(95,168,255,0.28),
+      inset 0 0 45px rgba(255,255,255,0.35);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+
+  /* ───────── SAME ANIMATION TOKENS AS HERO ───────── */
+
+  &.fade-in { animation: fadeIn 1.2s ease forwards; opacity: 0; }
+
+  .slide-up   { animation: slideUp 1.2s ease forwards; }
+  .rise       { animation: riseUp 1.4s ease forwards; }
+}
+
+.whatwe-glow {
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: rgba(95,168,255,0.25);
+  filter: blur(80px);
+  animation: float 12s ease-in-out infinite alternate;
+}

@@ -1,0 +1,124 @@
+.packages-section {
+  width: 85%;
+  margin: 160px auto;
+  padding: 6rem 4rem;
+  border-radius: 35px;
+  overflow: hidden;
+
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 0 45px rgba(95,168,255,0.25);
+
+  text-align: center;
+
+
+  /* ➤ Title styling + baseline like hero */
+  .packages-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 160px;
+      height: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -18px;
+      border-radius: 50%;
+      position: absolute;
+      background: radial-gradient(circle, rgba(95,168,255,.32), transparent 70%);
+      filter: blur(15px);
+    }
+  }
+
+  .packages-subtitle {
+    font-size: 1.15rem;
+    margin-bottom: 60px;
+    opacity: .7;
+  }
+
+
+  /* GRID */
+  .package-grid {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 40px;
+  }
+
+  /* CARDS */
+  .package-card {
+    width: 270px;
+    padding: 2.5rem;
+    border-radius: 32px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+      inset 0 0 15px rgba(255,255,255,0.28),
+      0 0 25px rgba(95,168,255,0.25);
+
+    transition: .35s ease;
+    cursor: pointer;
+
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow:
+        inset 0 0 22px rgba(255,255,255,0.30),
+        0 0 35px rgba(95,168,255,0.45);
+      scale:1.03;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: .98rem;
+    }
+  }
+
+  
+
+
+  /* same animation classes from hero */
+  &.fade-in { animation: fadeIn 1.2s ease forwards; opacity: 0; }
+  .slide-up { animation: slideUp 1.2s ease forwards; }
+  .rise { animation: riseUp 1.4s ease forwards; }
+}
+
+.plan-badge {
+  background: #0E131C;
+  color: #fff;
+  padding: 0.45rem 1.6rem;
+  border-radius: 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1.3rem;
+
+  box-shadow:
+    inset 0 0 8px rgba(255,255,255,0.15),
+    0 0 15px rgba(95,168,255,0.25);
+
+  transition: .3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    background: #161d28;
+    box-shadow: 0 0 25px rgba(95,168,255,0.35);
+  }
+}
+
+
+

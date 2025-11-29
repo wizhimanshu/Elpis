@@ -10,7 +10,7 @@ export default function Hero() {
 
       {/* 🔷 Main hero text + CTAs */}
       <div className="hero-content slide-up">
-        <h1 className="hero-title">
+        <h1 className="hero-title reveal">
           Track Your Interviews <br /> With Confidence & Clarity
         </h1>
 
