@@ -1,4 +1,5 @@
 import "./digitalboost.scss";
+import dashboardImage from "../../assets/interview-dashboard.png";
 
 export default function DigitalBoost() {
   return (
@@ -30,7 +31,7 @@ export default function DigitalBoost() {
         {/* RIGHT ───────────────────────── */}
         <div className="boost-visual">
           <img 
-            src="/src/assets/interview-dashboard.png"
+            src={dashboardImage}
             alt="interview ui dashboard"
           />
         </div>

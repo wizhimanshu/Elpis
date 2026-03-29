@@ -1,4 +1,5 @@
 import "./public-navbar.scss";
+import elpisLogo from "../../assets/elpis.svg";
 
 export default function PublicNavbar(){
     return (
@@ -7,7 +8,7 @@ export default function PublicNavbar(){
 
                 {/* Left: Logo */}
                 <div className="nav-left">
-                  <img src="/src/assets/elpis.svg" className="logo-icon" />
+                  <img src={elpisLogo} className="logo-icon" alt="Elpis Logo" />
                   {/* <span className="logo-text">ELPIS</span> */}
                 </div>
 
